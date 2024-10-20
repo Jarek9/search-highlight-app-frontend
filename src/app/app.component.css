@@ -1,0 +1,146 @@
+body {
+	background: linear-gradient(to bottom right, #94bff2, #88b8f2) !important;
+	animation: gradientAnimation 10s ease infinite;
+	min-height: 100vh;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+	max-width: 800px;
+	width: 100%;
+	margin: auto;
+	background:
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+button {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background: linear-gradient(to right, #0acbf2, #0a74f3);
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+button:disabled {
+	background: #cccccc;
+	color: #666666;
+	cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+	background: linear-gradient(to right, #0a74f3, #0acbf2);
+	transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.result-label {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.result-text {
+	margin-top: 20px;
+	animation: fadeIn 1s ease-in-out;
+}
+
+.query-text {
+	margin-top: 20px;
+	width: 400px;
+	padding: 8px;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table th,
+.table td {
+	text-align: center;
+	padding: 8px;
+	border: 1px solid #ddd;
+}
+
+.table th {
+	background-color: #a3c4e0;
+	font-weight: bold;
+}
+
+h3 {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.text-center {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+textarea, .query-text {
+  background-color: #a3c4e0;
+  color: #000;
+  border: 1px solid #888;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.5s ease;
+}
+
+textarea:focus, .query-text:focus {
+  background-color: #b8d0e6;
+  outline: none;
+  border-color: #7b9fb5;
+}
+
+textarea::placeholder, .query-text::placeholder {
+  color: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container, .table {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
